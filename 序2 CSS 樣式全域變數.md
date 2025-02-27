@@ -31,19 +31,19 @@ src/
 > quill使用了三個套件，`@type/quill: ^1.3.`、`@ngx-quill: ^19.0.1`、`@quill: 1.3.7`。
 
 ## 🛠 **設定步驟**
-1️⃣ 新增 quill-snow.scss（名稱可自訂）
-2️⃣ 安裝 Quill 套件
+- 1️⃣ 新增 quill-snow.scss（名稱可自訂）
+- 2️⃣ 安裝 Quill 套件
 ```
 npm install @ngx-quill@19.0.1
 npm install quill@1.3.7
 npm install @types/quill@1.3.0
 ```
-3️⃣ 引用 `quill-snow.scss` 至 `styles.scss`
+- 3️⃣ 引用 `quill-snow.scss` 至 `styles.scss`
 ```
 @import './styles/quill-snow.scss';
 ```
-4️⃣ 在 quill-snow.scss 設定樣式
-5️⃣ 在 app.module.ts 中引入 Quill
+- 4️⃣ 在 quill-snow.scss 設定樣式
+- 5️⃣ 在 app.module.ts 中引入 Quill
 ```
 import { QuillModule } from 'ngx-quill';
 
@@ -59,4 +59,4 @@ Quill 必須 在 app.module.ts 中引入 才能使用，詳細設定請參考 XU
 
 ---
 參考文件
-📌 [global cli](https://blog.crazyalu.com/2017/02/21/angular-cli-global/)
+- 📌 [global cli](https://blog.crazyalu.com/2017/02/21/angular-cli-global/)
