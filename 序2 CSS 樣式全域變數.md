@@ -26,4 +26,4 @@ src/
 
 **以下範例**
 舉最近碰到的`quill editor`編輯器為例:
--***1.新增quill-snow.scss(檔案名稱任意命名)***
+-**1.新增quill-snow.scss(檔案名稱任意命名)**
