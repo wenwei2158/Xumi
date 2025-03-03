@@ -2,56 +2,24 @@
 
 XUMI [api文件參考](https://sunnetcloud.sharepoint.com/:x:/s/WMPro6/EUOB6-lDDIZAuk3tjeB1nM8Byr4s2O5YffuVHqnPv95xkw?e=cJorWC&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA1MzEwMTQyMSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D)
 
-檔案內紀錄所有api文件規格，以個人資料為例:
+檔案內紀錄所有api文件規格，以個人資訊為例:
 ![image](https://github.com/user-attachments/assets/baeffb3c-5cec-40fe-9891-8da713c7b2d2)
+![{8E465736-A02E-44F0-8D8C-C0FDCAA184A1}](https://github.com/user-attachments/assets/39c9cf1e-9330-4a3b-aa4d-8672c0cc7036)
+![{93EDA5A0-5F51-4BB7-9B2C-07DE61254BEF}](https://github.com/user-attachments/assets/4eb7b20a-7b16-4f8a-ae71-b1a7991fe877)
 
+- 1.名稱: api用途
+- 2.url: api路徑以及呼叫方式
+- 3.request: 請求api參數
+- 4.response: api回應參數(此結構與介面定義相同)
+- 5.success sample: 成功回應結構樣式
+- 6.error: 錯誤代碼
+- 7.error sample: 錯誤代碼範例
 
 >[!NOTE]
->`angular 14`版之前是以no-standalone方式管理元件，因此會有主要管理元件的檔案像是:`app.module.ts`, `learning.modules.ts` 以`ngmodules`為中心開發的環境。
->主要以模組化形式將元件管理，以XUMI為例，會有`course, faq, home, learning`等，各模組間會利用路由方式引領使用者到相對應頁面。
->`angular 15`後則是可以直接引用該元件到任何位置，`Standalone API`則能夠簡化Angular的心智模型，擺脫以`NgModule`為中心的重用模型。好處是讓Angular使用起來簡單，程式碼撰寫不冗長，而且編譯速度更快。
+>可以參考其他檔案之規格修改成新的所需文件參數
 
-## **📌 設定 `app.config.ts`**
-引入元件來源，將路由位置指定到該元件
-```
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter, Routes } from '@angular/router';
-import { MessageBoardComponent } from './message-board/message-board.component';
-
-const routes: Routes = [
-  {path: '', redirectTo: 'message-board', pathMatch: 'full'},
-  {path: '**', redirectTo: 'message-board', pathMatch: 'full'},
-  {path: 'message-board', component: MessageBoardComponent, pathMatch: 'full' }
-
-]
-export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
-};
-```
-舉例MessageComponent則是匯入之檔案。
-
-## **📌 以學習環境通訊錄(address-book)為例**
-當需要元件時必須要註冊在該模組的declartion中，才能引用該套件使用。
-
-```
-modules
-│── learning(這是一個模組)
-  │── components
-    │── address-book
-  │── learning.modules.ts(該檔案需註冊)
-```
-如下方程式碼:
-```
-@NgModule({
-  declaration: [AddressBookComponent],
-  imports: [],
-  providers: []
-})
-export class LearningModule{}
-```
 ---
 參考文件
-- 📌 [standalone api](https://www.ithome.com.tw/news/154326)
-- 📌 [angular筆記](https://medium.com/@martina.says/angular%E7%AD%86%E8%A8%9830%E5%A4%A9-1%E5%95%9F%E5%8B%95angular%E5%B0%88%E6%A1%88-e2dbb6733410)
+- 📌 
 
 
