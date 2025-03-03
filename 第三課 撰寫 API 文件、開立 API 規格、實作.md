@@ -18,6 +18,33 @@ XUMI [api文件參考](https://sunnetcloud.sharepoint.com/:x:/s/WMPro6/EUOB6-lDD
 >[!NOTE]
 >可以參考其他檔案之規格修改成新的所需文件參數
 
+## 📌 **api 實作**
+當完成api文件開立之後，在api資料夾新增檔案，以課程api為例:
+```
+export class CourseService {
+  constructor(
+    private restfulApiService: RestfulApiService,
+    private httpUtils: HttpUtilService
+  ) {}
+
+  /**
+   * 取得課程章節教材
+   * @param {RequestCourseNode} params
+   * @return {*}  {Observable<ResponseCourseNode>}
+   * @memberof CourseService
+   */
+  getCourseMaterial(
+    params: RequestCourseNode(帶入參數，定義介面所需參數)
+  ): Observable<RestfulApiSuccess<ResponseCourseNode>> {
+    const { course_id } = params;
+    return this.restfulApiService.request(
+      this.httpUtils.getPath(ApiPathLearning.GetCourseNodes, [`${course_id}`])(放置api路徑內所需夾帶參數)
+    );
+  }
+}
+```
+依照此格式撰寫呼叫api方法，後續利用服務元件將api引入使用。
+
 ---
 參考文件
 - 📌 teams -> 99_舊資料 -> frontend traning -> 前端假資料.mp4
