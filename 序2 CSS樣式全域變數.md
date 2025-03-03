@@ -2,7 +2,7 @@
 
 在 Angular 專案中，我們通常會設定 `style.scss` 作為 **全域樣式** 檔案，確保所有 CSS 規則都能影響整個應用程式。  
 
-## **📌 設定 styles.scss**
+## 📌**設定 styles.scss**
 首先，請確保在 `angular.json` 中正確引入 `styles.scss`：
 ```json
 "styles": [
