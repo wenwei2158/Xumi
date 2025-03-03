@@ -1,6 +1,7 @@
 # 📌 第三課: 撰寫 API 文件、開立 API 規格、實作
 
-XUMI [api文件參考](https://sunnetcloud.sharepoint.com/:x:/s/WMPro6/EUOB6-lDDIZAuk3tjeB1nM8Byr4s2O5YffuVHqnPv95xkw?e=cJorWC&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA1MzEwMTQyMSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D)
+>[!INFO]
+>XUMI [api文件參考](https://sunnetcloud.sharepoint.com/:x:/s/WMPro6/EUOB6-lDDIZAuk3tjeB1nM8Byr4s2O5YffuVHqnPv95xkw?e=cJorWC&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA1MzEwMTQyMSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D)
 
 檔案內紀錄所有api文件規格，以個人資訊為例:
 ![image](https://github.com/user-attachments/assets/baeffb3c-5cec-40fe-9891-8da713c7b2d2)
