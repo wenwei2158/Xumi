@@ -1,1 +1,53 @@
+# 📌 第三課: 撰寫 API 文件、開立 API 規格、實作
+
+在 Angular 專案中，利用上方搜尋欄輸入`>generate`後可選擇component元件，或是在資料夾中點選上方新增檔案/資料夾方式，輸入完成後會產生檔案在側邊攔。
+
+>[!NOTE]
+>`angular 14`版之前是以no-standalone方式管理元件，因此會有主要管理元件的檔案像是:`app.module.ts`, `learning.modules.ts` 以`ngmodules`為中心開發的環境。
+>主要以模組化形式將元件管理，以XUMI為例，會有`course, faq, home, learning`等，各模組間會利用路由方式引領使用者到相對應頁面。
+>`angular 15`後則是可以直接引用該元件到任何位置，`Standalone API`則能夠簡化Angular的心智模型，擺脫以`NgModule`為中心的重用模型。好處是讓Angular使用起來簡單，程式碼撰寫不冗長，而且編譯速度更快。
+
+## **📌 設定 `app.config.ts`**
+引入元件來源，將路由位置指定到該元件
+```
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter, Routes } from '@angular/router';
+import { MessageBoardComponent } from './message-board/message-board.component';
+
+const routes: Routes = [
+  {path: '', redirectTo: 'message-board', pathMatch: 'full'},
+  {path: '**', redirectTo: 'message-board', pathMatch: 'full'},
+  {path: 'message-board', component: MessageBoardComponent, pathMatch: 'full' }
+
+]
+export const appConfig: ApplicationConfig = {
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+};
+```
+舉例MessageComponent則是匯入之檔案。
+
+## **📌 以學習環境通訊錄(address-book)為例**
+當需要元件時必須要註冊在該模組的declartion中，才能引用該套件使用。
+
+```
+modules
+│── learning(這是一個模組)
+  │── components
+    │── address-book
+  │── learning.modules.ts(該檔案需註冊)
+```
+如下方程式碼:
+```
+@NgModule({
+  declaration: [AddressBookComponent],
+  imports: [],
+  providers: []
+})
+export class LearningModule{}
+```
+---
+參考文件
+- 📌 [standalone api](https://www.ithome.com.tw/news/154326)
+- 📌 [angular筆記](https://medium.com/@martina.says/angular%E7%AD%86%E8%A8%9830%E5%A4%A9-1%E5%95%9F%E5%8B%95angular%E5%B0%88%E6%A1%88-e2dbb6733410)
+
 
