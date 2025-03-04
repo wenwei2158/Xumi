@@ -7,7 +7,7 @@
 - git 的方法有許多，常用`commit`、`push`、`branch`、`merge`、`checkout`，詳細使用方法可以參考
 
 >[!IMPORTANT]
->如果分支以push到遠端，但想要反悔並不保留紀錄可以使用`git reset`，**切記，請小心使用**，以下為使用步驟:
+>如果分支已push到遠端，想要反悔並不保留紀錄可以使用`git reset`，**切記，請小心使用**，以下為使用步驟:
 >- 1.git checkout到要異動的分支
 >- 2.git reset --hard <reflog-hash>
 >- 3.git push --force
