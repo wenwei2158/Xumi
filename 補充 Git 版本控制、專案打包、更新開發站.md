@@ -34,6 +34,6 @@
 參考文件
 - 📌[git文件](https://git-scm.com/book/zh-tw/v2/%E9%96%8B%E5%A7%8B-%E9%97%9C%E6%96%BC%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6)
 - 📌[學習git分支](https://learngitbranching.js.org/?locale=zh_TW)
-
+- 📌**[猴子都能懂的git指南](https://nulab.com/zh-tw/learn/software-development/git-tutorial/)**
 
 
