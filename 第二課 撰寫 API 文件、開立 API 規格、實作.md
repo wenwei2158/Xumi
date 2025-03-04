@@ -75,6 +75,6 @@ export class CourseService {
 
 ---
 參考文件
-- 📌 teams -> 99_舊資料 -> frontend traning -> 前端假資料.mp4
+- 📌前端假資料.mp4
 
 
