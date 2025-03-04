@@ -5,9 +5,9 @@
 
 >[!IMPORTANT]
 >如果分支以push到遠端，但想要反悔並不保留紀錄可以使用`git reset`，**切記，請小心使用**，以下為使用步驟:
->1.git checkout到要異動的分支
->2.git reset --hard <reflog-hash>
->3.git push --force
+>- 1.git checkout到要異動的分支
+>- 2.git reset --hard <reflog-hash>
+>- 3.git push --force
 
 ## 📌**專案打包**
 >[!NOTE]
