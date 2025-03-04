@@ -21,6 +21,31 @@
 >可以參考其他檔案之規格修改成新的所需文件參數
 
 ## 📌 **api 實作**
+實作api之前會需要建立interface定義介面，像是:
+```
+在`node.model.ts`中，列出需要的參數:
+export interface CourseNode {
+  available: boolean;
+  identifier: string;
+  text: string;
+  read: boolean;
+  type: MaterialType;
+  is_last_stop: boolean;
+  is_blank: boolean; // 是否另開視窗顯示
+  blank_url: string;
+  extra_info: NodeExtra;
+  file_info: NodeFile;
+  items: CourseNode[];
+  isIvqShow : boolean;
+  isSubtitleShow : boolean;
+  isSummaryShow : boolean;
+}
+export interface ResponseCourseNode {
+  all_items: number;
+  read_items: number;
+  items: CourseNode[];
+}
+```
 當完成api文件開立之後，在api資料夾新增檔案，以課程api為例:
 ```
 export class CourseService {
@@ -45,6 +70,7 @@ export class CourseService {
   }
 }
 ```
+
 依照此格式撰寫呼叫api方法，後續利用服務元件將api引入使用。
 
 ---
