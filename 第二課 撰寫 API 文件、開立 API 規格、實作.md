@@ -46,7 +46,7 @@ export interface ResponseCourseNode {
   items: CourseNode[];
 }
 ```
-當完成api文件開立之後，在api資料夾新增檔案，以課程api為例:
+當完成api文件開立之後，在api資料夾新增檔案，以`取得課程教材api`為例:
 ```
 export class CourseService {
   constructor(
