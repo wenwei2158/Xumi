@@ -14,7 +14,8 @@
 >這裡提到如何clone gitlab專案道地端:
 >1.首先到gitlab，點選欲複製的專案，點選右上角程式碼以HTTPS複製，
 >2.開啟終端機或是IDE環境，在指定資料夾下執行 `git clone https://pisb-gitlab.kh.elearn.com.tw/angular-developers/motcmpb.git`
->3.由於主機有更換過，所以要確定.gitmodules檔案中的遠端資料庫位置是否正確。詳細可參考(XUMI為例)![{F2E0FED8-1C3E-46B4-8D11-A4981E0F9DFA}](https://github.com/user-attachments/assets/1f8a83aa-1248-4169-93eb-c9671443d7df)
+>3.由於主機有更換過，所以要確定.gitmodules檔案中的遠端資料庫位置是否正確。詳細可參考(XUMI為例)
+>![{F2E0FED8-1C3E-46B4-8D11-A4981E0F9DFA}](https://github.com/user-attachments/assets/1f8a83aa-1248-4169-93eb-c9671443d7df)
 
 打包專案步驟很簡單，在終端機執行`npm run build:web`
 
